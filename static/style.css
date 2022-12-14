@@ -1,0 +1,134 @@
+html{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #DAC8BE;
+}
+body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #DAC8BE;
+}
+#auth-page{
+    font-family: 'Playfair Display', serif;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    color: #58626c;
+}
+#auth-block{
+    margin: 20px;
+    padding: 50px;
+    background-color: #f5f1ee;
+    border-radius: 20px 20px 20px 20px;
+    height: fit-content;
+    width: fit-content;
+    box-shadow: rgba(88, 98, 108, 0.5) 0px 7px 29px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#introduction{
+    text-align: left;
+    height: 100%;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#introduction-title b{
+    font-weight: 600;
+    font-size: 2.5vh;
+}
+#introduction-subtitle{
+    width: fit-content;
+    height: 100%;
+    font-size: 1.6vh;
+    font-family: 'Roboto', sans-serif;
+}
+#introduction #contact{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6vh;
+}
+#contact-icons{
+    padding-top: 10px;
+}
+#contact-icons > i{
+    font-size: 2vh;
+    padding-right: 5px;
+}
+#auth{
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#auth form{
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    padding: 20px;
+}
+#auth .form-control{
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-radius: 0 0 0 0;
+    font-size: 1.5vh;
+}
+#auth .input-group-text{
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-radius: 0 0 0 0;
+}
+#auth h3{
+    font-family: 'Playfair Display', serif;
+}
+#auth p{
+    font-family: 'Roboto', sans-serif;
+}
+#auth > form > div > span{
+    background: transparent;
+}
+#auth > form > div > input{
+    background: transparent;
+    font-family: 'Roboto', sans-serif;
+}
+#auth > form > div > input:focus{
+    border-color: #ecc1a1 !important;
+    transition: border-color .15s ease-in-out;
+}
+#auth .btn{ 
+    background-color: #ecc1a1;
+    border: none;
+    color: black;
+    width: 100%;
+    padding: 10px;
+}
+#logo{
+    height: 300px;
+    width: 300px;;
+}
+#auth-footer{
+    height: fit-content;
+    padding: 10px;
+    text-align: center;
+    font-size: 2vh;
+}
+#auth-footer a{
+    text-decoration: none;
+    font-size: 1.6vh;
+    color: black;
+}
+#auth-footer a:hover{
+    color: rgba(88, 98, 108, 1);
+    transition: color .15s ease-in-out;
+}

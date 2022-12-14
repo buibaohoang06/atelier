@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% block body %}
+<div id="auth-page" class="container animate__animated animate__fadeIn">
+    <div id="auth-block" class="row">
+        <div id="introduction" class="col d-none d-lg-block d-xl-block d-sm-none d-md-none">
+            <div>
+                <p id="introduction-title"><b>Welcome aboard, traveller</b></p>
+                <p id="introduction-subtitle">
+                    If you have created an account, login here. <br>Otherwise, you can create one <a href="/auth/register">here</a>. 
+                </p>
+                <div id="contact">
+                    <b>Encountering problems?</b> Contact us over E-mail:
+                    <p>help@atelier.com</p>
+                    <b>Do you need assistance?</b> Connect with us on: 
+                    <div id="contact-icons">
+                        <!--Add social later-->
+                        <i class="bi bi-instagram" style="color: #fc3188"></i>
+                        <i class="bi bi-discord" style="color: #404fec"></i>
+                        <i class="bi bi-twitter" style="color: #1c9af0"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="auth" class="col">
+            <form method="POST" action="/auth/register">
+                <h3><b>Hi there,</b></h3>
+                <p>We are happy to have you onboard!</p>
+                {{ form.csrf_token() }}
+                <div class="input-group mb-4">
+                    <span class="input-group-text"><i class="bi bi-person-circle"></i></span>
+                    {{ form.realname(class_="form-control shadow-none") }}
+                </div>
+                <div class="input-group mb-4">
+                    <span class="input-group-text"><i class="bi bi-person-badge"></i></span>
+                    {{ form.username(class_="form-control shadow-none") }}
+                </div>
+                <div class="input-group mb-4">
+                    <span class="input-group-text"><i class="bi bi-envelope-at-fill"></i></span>
+                    {{ form.email(class_="form-control shadow-none") }}
+                </div>
+                <div class="input-group mb-4">
+                    <span class="input-group-text"><i class="bi bi-key-fill"></i></span>
+                    {{ form.password(class_="form-control shadow-none") }}
+                </div>
+                <button class="btn btn-primary" type="submit"><i class="bi bi-send"></i> Log In</button>
+            </form>
+        </div>
+        <span id="auth-footer">
+            <b>Useful links</b><br>
+            <a href="/marketplace">Marketplace</a> •
+            <a href="/faq">FAQ</a> •
+            <a href="/about">About</a> •
+            <a href="/contact">Contact</a>
+        </span>
+    </div>
+</div>
+{% endblock %}

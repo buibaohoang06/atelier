@@ -26,7 +26,7 @@ class LoginForm(FlaskForm):
     submit = SubmitField()
 
 class RegisterForm(FlaskForm):
-    uusername = StringField(validators=[InputRequired()], render_kw={"placeholder": "Username"})
+    username = StringField(validators=[InputRequired()], render_kw={"placeholder": "Username"})
     password = PasswordField(validators=[InputRequired()], render_kw={"placeholder": "Password"})
     email = EmailField(validators=[InputRequired()], render_kw={"placeholder": "E-mail"})
     realname = StringField(validators=[InputRequired()], render_kw={"placeholder": "Full Name"})
@@ -37,6 +37,10 @@ login_manager = LoginManager()
 login_manager.init_app(app)
 login_manager.login_view = "auth.login"
 
+@login_manager.user_loader
+def load_user(id):
+    return User.query.get(int(id))
+    
 #Routes
 @authbp.route("/login", methods=['GET', 'POST'])
 def login():
