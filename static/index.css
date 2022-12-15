@@ -1,0 +1,19 @@
+#index-page{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+#index-navbar *{
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+#index-navbar nav{
+    padding: 30px;
+}
+#index-navbar a{
+    color: black;
+    text-decoration: none;
+    padding: 20px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
